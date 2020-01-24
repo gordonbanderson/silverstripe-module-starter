@@ -1,4 +1,7 @@
 {
-  "default-vendor": "vendor",
-  "default-module": "module"
+  "default-vendor": "suilven",
+  "default-author": "Gordon Anderson",
+  "default-email": "gordon.b.anderson@gmail.com",
+  "default-organisation": "n/a",
+  "default-homepage": "https://github.com/gordonbanderson"
 }
