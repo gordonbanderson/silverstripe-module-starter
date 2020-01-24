@@ -1,62 +1,39 @@
 {
-  "name": "{module}",
+  "name": "module-name",
   "version": "1.0.0",
-  "description": "{description}",
-  "homepage": "{repo-url}",
-  "keywords": {keywords-json},
-  "license": "BSD-3-Clause",
-  "author": "{organisation}",
-  "contributors": [
-    {
-      "name": "{author}",
-      "email": "{email}",
-      "url": "{homepage}"
-    }
-  ],
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "cachebust": "cross-env NODE_ENV=production node cache-bust.js"
+  },
   "repository": {
     "type": "git",
-    "url": "{repo-url}.git"
+    "url": "git+https://github.com/gordonbanderson/{module-name}.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "{repo-url}/issues"
+    "url": "{homepage}/issues"
   },
-  "engines": {
-    "node": ">= 6.x"
-  },
-  "scripts": {
-    "watch": "webpack --env.development --colors --watch",
-    "build": "webpack --env.production --colors --optimize-minimize"
-  },
-  "dependencies": {},
+  "homepage": "{homepage}",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.17",
-    "copy-webpack-plugin": "^4.2.0",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
-    "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.8",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.0",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.8.1"
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "modules": false
-        }
-      ]
-    ]
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "laravel-mix": "^5.0.1"
   },
   "browserslist": [
-    "> 1%",
     "last 2 versions"
   ]
 }
