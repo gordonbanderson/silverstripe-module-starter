@@ -146,7 +146,7 @@ by using the SilverStripe `Requirements` class in your controller (where `vendor
 ```php
 use SilverStripe\View\Requirements;
 
-Requirements::css('vendor/module: client/dist/styles/bundle.css');
+Requirements::css('vendor/module: client/dist/css/bundle.css');
 Requirements::javascript('vendor/module: client/dist/js/bundle.js');
 ```
 
@@ -175,7 +175,7 @@ example:
 
 // Load Styles:
 
-require('styles/bundle.scss');
+require('css/bundle.scss');
 
 // Load Scripts:
 
