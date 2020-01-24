@@ -6,6 +6,6 @@ Name: {module}
 
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - "{repo-name}: admin/client/dist/styles/bundle.css"
+    - "{repo-name}: admin/client/dist/css/bundle.css"
   extra_requirements_javascript:
     - "{repo-name}: admin/client/dist/js/bundle.js"
